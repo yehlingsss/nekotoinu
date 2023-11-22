@@ -20,20 +20,21 @@
         To start you off on your journey, here are some important places you need to take note of for when your supplies are running low or when your pet falls sick. And while you're here, check out our list of pet-friendly cafes if you plan to bring your pet out for some social activities!</p>
         
         <div class="icon-buttons">
-            <button onclick="showDropdown('Supplies', 'Find a pet shop');"><span class="material-symbols-outlined" alt="Pet supplies">pet_supplies</span></button>&nbsp;&nbsp;
-            <button onclick="showDropdown('Groomers', 'Find a groomer');"><span class="material-symbols-outlined" alt="Groomers">health_and_beauty</span></button>&nbsp;&nbsp;
-            <button onclick="showDropdown('Vets', 'Find a vet');"><span class="material-symbols-outlined" alt="Veterinary clinics">medical_services</span></button>&nbsp;&nbsp;
-            <button onclick="showDropdown('Boarding', 'Find daycare/boarding options');"><span class="material-symbols-outlined" alt="Daycare/Boarding">luggage</span></button>&nbsp;&nbsp;
-            <button onclick="showDropdown('Others', 'Find pet-friendly cafes');"><span class="material-symbols-outlined" alt="Pet-friendly places">deck</span></button>
+            <button onclick="showDropdown('supplies', 'Find a pet shop');"><span class="material-symbols-outlined" alt="Pet supplies">pet_supplies</span></button>
+            <button onclick="showDropdown('groomers', 'Find a groomer');"><span class="material-symbols-outlined" alt="Groomers">health_and_beauty</span></button>
+            <button onclick="showDropdown('vets', 'Find a vet');"><span class="material-symbols-outlined" alt="Veterinary clinics">medical_services</span></button>
+            <button onclick="showDropdown('boarding', 'Find daycare/boarding options');"><span class="material-symbols-outlined" alt="Daycare/Boarding">luggage</span></button>
+            <button onclick="showDropdown('others', 'Find pet-friendly cafes');"><span class="material-symbols-outlined" alt="Pet-friendly places">deck</span></button>
         </div>
+
         
         <div class="dropdown-menu" id="dropdownContainer" style="display: none;">
             <select id="placesDropdown" onchange="showListings(this.value);">
                 <option value="" disabled selected hidden>Select an option</option>
             </select>
         </div>
-        
-        <div class="searchResultListing" id="searchResults" style="display: none;">
+
+        <div id="searchResults" style="display: none;">
             <div id="suppliesResult">
                 <ul id="suppliesNorth">
                     <li><h2><a href="https://www.google.com" target="_blank">Place 1</a></h2>
