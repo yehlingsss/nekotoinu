@@ -57,11 +57,12 @@ function showListings(location) {
         } else if (othersResults.style.display === 'block') {
             return 'Others';
         }
+
     }
 
     const category = getCategory();
     
-    const specificList = document.getElementById(`${category.toLowerCase()}Result`);
+    const specificList = document.getElementById(`${category}Result`);
 
     const specificLocationList = specificList.querySelector(`#${category}${location}`);
     
