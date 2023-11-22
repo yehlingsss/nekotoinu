@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Neko to Inu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Neko to Inu</h1>
+    </header>
+
+    <main>
+        <p class="description">If you're a first-time pet owner, congratulations! Adding a new member to your family is always a joyous occasion.<br /><br />
+        To start you off on your journey, here are some important places you need to take note of for when your supplies are running low or when your pet falls sick. And while you're here, check out our list of pet-friendly cafes if you plan to bring your pet out for some social activities!</p>
+        
+        <div class="icon-buttons">
+            <button onclick="showDropdown('Supplies', 'Find a pet shop');"><span class="material-symbols-outlined" alt="Pet supplies">pet_supplies</span></button>&nbsp;&nbsp;
+            <button onclick="showDropdown('Groomers', 'Find a groomer');"><span class="material-symbols-outlined" alt="Groomers">health_and_beauty</span></button>&nbsp;&nbsp;
+            <button onclick="showDropdown('Vets', 'Find a vet');"><span class="material-symbols-outlined" alt="Veterinary clinics">medical_services</span></button>&nbsp;&nbsp;
+            <button onclick="showDropdown('Boarding', 'Find daycare/boarding options');"><span class="material-symbols-outlined" alt="Daycare/Boarding">luggage</span></button>&nbsp;&nbsp;
+            <button onclick="showDropdown('Others', 'Find pet-friendly cafes');"><span class="material-symbols-outlined" alt="Pet-friendly places">deck</span></button>
+        </div>
+        
+        <div class="dropdown-menu" id="dropdownContainer" style="display: none;">
+            <select id="placesDropdown" onchange="showListings(this.value);">
+                <option value="" disabled selected hidden>Select an option</option>
+            </select>
+        </div>
+        
+        <div class="searchResultListing" id="searchResults" style="display: none;">
+            <div id="suppliesResult">
+                <ul id="suppliesNorth">
+                    <li><h2><a href="https://www.google.com" target="_blank">Place 1</a></h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 2</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="suppliesEast">
+                    <li><h2>Place 3</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 4</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            
+                <ul id="suppliesCentral">
+                    <li><h2>Place 5</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 6</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="suppliesSouth">
+                    <li><h2>Place 7</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 8</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="suppliesWest">
+                    <li><h2>Place 9</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 10</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            </div>
+        
+            <div id="groomersResult">
+                <ul id="groomersNorth">
+                    <li><h2>Place 11</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 12</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="groomersEast">
+                    <li><h2>Place 13</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 14</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            
+                <ul id="groomersCentral">
+                    <li><h2>Place 15</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 16</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="groomersSouth">
+                    <li><h2>Place 17</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 18</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="groomersWest">
+                    <li><h2>Place 19</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 20</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="vetsResult">
+                <ul id="vetsNorth">
+                    <li><h2>Place 21</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 22</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="vetsEast">
+                    <li><h2>Place 23</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 24</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            
+                <ul id="vetsCentral">
+                    <li><h2>Place 25</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 26</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="vetsSouth">
+                    <li><h2>Place 27</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 28</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="vetsWest">
+                    <li><h2>Place 29</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 30</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="boardingResult">
+                <ul id="boardingNorth">
+                    <li><h2>Place 31</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 32</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="boardingEast">
+                    <li><h2>Place 33</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 34</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            
+                <ul id="boardingCentral">
+                    <li><h2>Place 35</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 36</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="boardingSouth">
+                    <li><h2>Place 37</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 38</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="boardingWest">
+                    <li><h2>Place 39</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 40</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="othersResult">
+                <ul id="othersNorth">
+                    <li><h2>Place 41</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 42</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="othersEast">
+                    <li><h2>Place 43</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 44</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+            
+                <ul id="othersCentral">
+                    <li><h2>Place 45</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 46</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="othersSouth">
+                    <li><h2>Place 47</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 48</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+
+                <ul id="othersWest">
+                    <li><h2>Place 49</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                    <li><h2>Place 50</h2>
+                        <p class="address">Ladida road, unit number, postcode</p>
+                    </li>
+                </ul>
+        </div>
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
