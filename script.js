@@ -71,5 +71,4 @@ function getCategory() {
     } else if (othersResults.style.display === 'block') {
         return 'Others';
     }
-    return 'Supplies';
 }
