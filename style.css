@@ -12,14 +12,13 @@ body {
     margin: 0 auto;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     body {
         min-width: 100vw;
     }
 
     .dropdown-menu {
-        min-width: 90vw;
-        display: flex;
+        min-width: 100vw;
         justify-content: center;
     }
 }
@@ -40,7 +39,6 @@ a:link:hover, a:visited:hover {
 }
 
 header {
-    display: flex;
     justify-content: center;
     margin: 0 auto;
     padding: 0 10%;
@@ -56,7 +54,6 @@ header {
 }
 
 .description {
-    display: flex;
     justify-content: center;
     margin: 0 auto;
     padding: 0 10%;
@@ -68,11 +65,10 @@ header {
     display: flex;
     justify-content: center;
     margin: 20px auto;
-    padding: 0.5% 3%;
+    gap: 15px;
 }
 
 .icon-buttons button {
-    margin: 0 auto;
     background-color: #913831;
     color: #F1E9E0;
     border-radius: 50%;
@@ -95,7 +91,6 @@ header {
 
 .dropdown-menu {
     width: 50%;
-    display: flex;
     justify-content: center;
     margin: 0 auto;
     padding: 0 3%;
@@ -129,7 +124,7 @@ header {
     color: #D2B48C;
 }
 
-.searchResultListing {
+#searchResults {
     margin-top: 20px;
     padding: 10px;
 }
