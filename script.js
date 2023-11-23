@@ -24,13 +24,21 @@ function populateDropdown(category, placeholder) {
     }
 }
 
+let currentCategory;
+
 function showDropdown(category, placeholder) {
     populateDropdown(category, placeholder);
     const dropdownContainer = document.getElementById('dropdownContainer');
     dropdownContainer.style.display = 'block';
 
+    currentCategory = category;
+
     const searchResults = document.getElementById('searchResults');
     searchResults.style.display = 'none';
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function showListings(location) {
@@ -38,6 +46,9 @@ function showListings(location) {
     allLists.forEach(list => {
         list.style.display = 'none';
     });
+
+    const currentCategoryResults = document.getElementById(`${currentCategory}Result`);
+    currentCategoryResults.style.display = "block";
 
     function getCategory() {
         const suppliesResults = document.getElementById('suppliesResult');
@@ -47,26 +58,27 @@ function showListings(location) {
         const othersResults = document.getElementById('othersResult');
     
         if (suppliesResults.style.display === 'block') {
-            return 'Supplies';
+            return 'supplies';
         } else if (groomersResults.style.display === 'block') {
-            return 'Groomers';
+            return 'groomers';
         } else if (vetsResults.style.display === 'block') {
-            return 'Vets';
+            return 'vets';
         } else if (boardingResults.style.display === 'block') {
-            return 'Boarding';
+            return 'boarding';
         } else if (othersResults.style.display === 'block') {
-            return 'Others';
+            return 'others';
         }
 
     }
 
     const category = getCategory();
     
-    const specificList = document.getElementById(`${category}Result`);
+    const specificLocationList = document.getElementById(`${category}${capitalizeFirstLetter(location)}`);
 
-    const specificLocationList = specificList.querySelector(`#${category}${location}`);
-    
     if (specificLocationList) {
+        const searchResults = document.getElementById("searchResults");
+        searchResults.style.display = "block";
+
         specificLocationList.style.display = 'block';
     }
 }
