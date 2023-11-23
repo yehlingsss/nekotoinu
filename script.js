@@ -42,7 +42,7 @@ function capitalizeFirstLetter(string) {
 }
 
 function showListings(location) {
-    const allLists = document.querySelectorAll('#searchResults > div');
+    const allLists = document.querySelectorAll('#searchResults > div > ul');
     allLists.forEach(list => {
         list.style.display = 'none';
     });
