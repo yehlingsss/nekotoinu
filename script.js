@@ -48,7 +48,7 @@ function showListings(location) {
     });
 
     const currentCategoryResults = document.getElementById(`${currentCategory}Result`);
-    currentCategoryResults.style.display = "block";
+    currentCategoryResults.style.display = 'block';
 
     function getCategory() {
         const suppliesResults = document.getElementById('suppliesResult');
@@ -73,11 +73,11 @@ function showListings(location) {
 
     const category = getCategory();
     
-    const specificLocationList = document.getElementById(`${category}${capitalizeFirstLetter(location)}`);
+    const specificLocationList = document.getElementById(`${currentCategory}${capitalizeFirstLetter(location)}`);
 
     if (specificLocationList) {
-        const searchResults = document.getElementById("searchResults");
-        searchResults.style.display = "block";
+        const searchResults = document.getElementById('searchResults');
+        searchResults.style.display = 'block';
 
         specificLocationList.style.display = 'block';
     }
