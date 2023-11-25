@@ -56,7 +56,7 @@ header {
     padding: 0 10%;
     color: #913831;
     font-family: 'DM Serif Display', serif;
-    font-size: min(max(1.2rem, 5vw), 2rem);
+    font-size: min(max(1.1rem, 5vw), 1.9rem);
     font-optical-sizing: auto;
     font-style: italic;
     text-align: center;
@@ -69,7 +69,7 @@ header {
     justify-content: center;
     margin: 0 auto;
     padding: 0 10%;
-    font-size: min(max(0.8rem, 3vw), 0.9rem);
+    font-size: min(max(0.7rem, 3vw), 0.8rem);
     line-height: 150%;
 }
 
@@ -136,7 +136,7 @@ header {
 
 ul {
     list-style-type: none;
-    padding: 0 0 50px 0;
+    padding: 0 0 40px 0;
 }
   
 h2 {
